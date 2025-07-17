@@ -20,7 +20,7 @@ if "user" not in st.session_state:
     st.session_state.user = "Guest"
 
 # --- Check for login via query params (from extension) ---
-query_params = st.experimental_get_query_params()
+query_params = st.query_params
 username_from_url = query_params.get("username", [None])[0]
 url_from_url = query_params.get("url", [None])[0]
 

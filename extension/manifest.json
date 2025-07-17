@@ -4,14 +4,18 @@
   "version": "1.0",
   "description": "Automatically detects phishing websites.",
   "permissions": ["tabs", "scripting"],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": [
+    "http://172.20.10.2:8000/*",
+    "<all_urls>"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content_script.js"]
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
     }
   ],
   "action": {

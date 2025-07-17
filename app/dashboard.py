@@ -9,7 +9,7 @@ from utils.history import save_detection_history  # ✅ Import history saver
 # Load the trained model once
 @st.cache_resource
 def load_model():
-    return joblib.load("models/random_forest_model.pkl")
+    return joblib.load("models/random_forest_model2.pkl")
 
 model = load_model()
 

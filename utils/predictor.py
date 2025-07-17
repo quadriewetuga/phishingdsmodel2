@@ -4,7 +4,7 @@ import pandas as pd
 from scripts.feature_engineering import extract_features  # adjust if path differs
 
 # Load your model (adjust the path if needed)
-model = joblib.load("models/random_forest_model.pkl")
+model = joblib.load("models/random_forest_model2.pkl")
 
 def predict_url(url: str) -> tuple[int, float]:
     # Extract features from the URL
