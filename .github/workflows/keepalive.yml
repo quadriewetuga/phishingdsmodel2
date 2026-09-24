@@ -1,0 +1,11 @@
+name: keep-streamlit-active
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -fsS "https://phishingdsmodelii.streamlit.app/" -o /dev/null
